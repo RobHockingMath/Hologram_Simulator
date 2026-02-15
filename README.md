@@ -2,20 +2,7 @@
 
 This codebase is is for simulating the appearance of a half-parallax hologram, given half-parallax hogel-column images.  It produces frames of an animation of how the resulting hologram would look - accurate within the ray (but not the wave) model of light - by moving the camera around a virtual copy of the hologram and rendering from a few angles.  You can then put the frames together with ffmpeg.
 
-Right now I think there is some confusion about how the hogels are laid out.  It can be like this,
-
-O O O O O
-O O O O O
-O O O O O
-O O O O O
-
-or like this
-
-O O O O O
- O O O O O
-O O O O O
- O O O O O
-O O O O O
+Right now I think there is some confusion about how the hogels are laid out.  It can be a simple rectangular grid, or an interlaced pattern where the hogels in even numbered rows are offset by half a hogel width relative to the odd numbered rows.
 
 The second pattern is supposed to lead to better holograms.  Obviously, the same layout that was assumed when the hogel images were made should be used here in the simulator.  But I think that isn't the case, which will cause some small jitter errors.  But these aren't the end of the world.
 
