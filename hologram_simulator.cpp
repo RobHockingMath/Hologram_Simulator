@@ -20,8 +20,10 @@ int main() {
 	//DY=42.56;
 	//DX=48;
 
-    int N_A = 160; // number of hogels horizontally
-    int N_B = 160; // number of hogels vertically
+    //int N_A = 160; // number of hogels horizontally
+    //int N_B = 160; // number of hogels vertically
+	int N_A = 150; // number of hogels horizontally
+    int N_B = 225; // number of hogels vertically
     //int N_I = 1980; // angular resolution of each hogel.  
 	int N_I = 1920;
 
@@ -32,8 +34,8 @@ int main() {
 
     //std::string hogel_folder_name = "HogelImagesHR6_HPara_X/Hogel_Column_";
 	//std::string hogel_folder_name = "HogelViews_120HR_Buffer_Brighter/Hogel_Column_";
-	//std::string hogel_folder_name = "Oppenheimer_hogels4/Hogel_Column_";
-    std::string hogel_folder_name = "Succub_HogelsHR/Hogel_Column_";
+	std::string hogel_folder_name = "Oppenheimer_hogels5/Hogel_Column_";
+    //std::string hogel_folder_name = "Succub_HogelsHR/Hogel_Column_";
 
     // Load hogels into a vector
     std::vector<unsigned char***> hogels(N_A,nullptr);
@@ -207,7 +209,7 @@ int main() {
 		}
 
         char outname[256];
-        snprintf(outname,256,"Succub_Simulation_HR/%d_space.png",M-1-l);
+        snprintf(outname,256,"OppenHeimer_Out/%d_space.png",M-1-l);
         if(!write_image_as_3d_double(outname,I,J,U)){
             std::cerr<<"Failed to write "<<outname<<"\n";
         }
