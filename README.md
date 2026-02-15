@@ -2,6 +2,23 @@
 
 This codebase is is for simulating the appearance of a half-parallax hologram, given half-parallax hogel-column images.  It produces frames of an animation of how the resulting hologram would look - accurate within the ray (but not the wave) model of light - by moving the camera around a virtual copy of the hologram and rendering from a few angles.  You can then put the frames together with ffmpeg.
 
+Right now I think there is some confusion about how the hogels are laid out.  It can be like this,
+
+O O O O O
+O O O O O
+O O O O O
+O O O O O
+
+or like this
+
+O O O O O
+ O O O O O
+O O O O O
+ O O O O O
+O O O O O
+
+The second pattern is supposed to lead to better holograms.  Obviously, the same layout that was assumed when the hogel images were made should be used here in the simulator.  But I think that isn't the case, which will cause some small jitter errors.  But these aren't the end of the world.
+
 The code is, by my standards, not bad.  I could probably clean it up enough to make it easy to use with a few hours work.  The magic happens inside hologram_simulator.cpp - the main issue is that the various parameters and assumptions are hard coded in there instead of being command line parameters.  For example, right now the line
 
 std::string hogel_folder_name = "Oppenheimer_hogels5/Hogel_Column_";
