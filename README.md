@@ -21,3 +21,5 @@ make -f Makefile_simulator, and then run with ./hologram_simulator
 
 There are of course implicit assumptions about how the hogel column images were generated.  
 
+For now, just try getting it to run on the sample set of hogel column images provided.  Then we can talk about how to make your own hogel column images.
+
